@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jorge Arcas - Frontend Developer</title>
+    <link rel="icon" href="src/images/favicon.ico">
+    <!-- Base and layout styles -->
+    <link rel="stylesheet" href="src/css/base.css">
+    <!-- Component/Section-specific styles -->
+    <link rel="stylesheet" href="src/css/header.css">
+    <link rel="stylesheet" href="src/css/hero.css">
+    <link rel="stylesheet" href="src/css/about.css">
+    <link rel="stylesheet" href="src/css/projects.css">
+    <link rel="stylesheet" href="src/css/skills.css">
+    <link rel="stylesheet" href="src/css/footer.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <div class="header-wrapper">
+                <div class="logo">
+                    <img src="src/images/favicon.ico" alt="logo">
+                </div>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#experience">Experience</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="menu-toggle" id="menuToggle">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"
+                        stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+    <!-- Floating Menu Button -->
+    <div class="floating-menu-btn" id="floatingMenuBtn">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line class="line" x1="3" y1="12" x2="21" y2="12"></line>
+            <line class="line" x1="3" y1="6" x2="21" y2="6"></line>
+            <line class="line" x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+    </div>
+
+    <div class="full-width-overlay-menu" id="fullWidthMenu">
+        <div class="overlay-menu-content">
+            <ul class="overlay-nav-list">
+                <li><a href="#" data-image-index="0">Home</a></li>
+                <li><a href="#about" data-image-index="1">About</a></li>
+                <li><a href="#projects" data-image-index="2">Projects</a></li>
+                <li><a href="#skills" data-image-index="3">Skills</a></li>
+                <li><a href="#contact" data-image-index="4">Contact</a></li>
+            </ul>
+        </div>
+        <div class="overlay-menu-images">
+            <div class="overlay-menu-image">
+                <img src="src/images/home.jpg"
+                    alt="home">
+            </div>
+            <div class="overlay-menu-image">
+                <img src="src/images/about.jpg"
+                    alt="about">
+            </div>
+            <div class="overlay-menu-image">
+                <img src="src/images/projects.jpg"
+                    alt="projects">
+            </div>
+            <div class="overlay-menu-image">
+                <img src="src/images/skills.jpg"
+                    alt="skills">
+            </div>
+            <div class="overlay-menu-image">
+                <img src="src/images/contact.jpg"
+                    alt="contact">
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <section id="hero" class="hero-section">
+        <div class="hero-content">
+            <h1>Jorge Arcas</h1>
+            <p class="hero-subtitle">Frontend Developer</p>
+            <span class="open-for-work">#OpenForWork</span>
+            <div class="scroll-incentive">
+                <svg class="chevron-down" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#121212" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="about-section">
+        <div class="about-container">
+            <div class="about-content">
+                <h2>About Me</h2>
+                <div class="about-text">
+                    <p class="lead">Programming my future.</p>
+                    <p>Frontend Developer and passionate about creating beautiful responsive and user-friendly web applications and APIs.</p>
+                </div>
+            </div>
+            <span class="section-divider"></span>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <h2 class="section-title">My Projects</h2>
+            <div class="projects-grid">
+                <!-- Project 1: Mathgeon -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="src/images/mathgeon.png" alt="Mathgeon Game">
+                    </div>
+                    <div class="project-content">
+                        <h3>Mathgeon</h3>
+                        <p class="project-description">A videogame focused on maths, animations made with pure css. Currently in OVERHAUL development.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">TypeScript</span>
+                            <span class="tech-tag">Rust</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/J0rgw/mathgeon" target="_blank" rel="noopener noreferrer" class="project-link">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 2: SoundTown -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="src/images/Soundtown.png" alt="SoundTown App">
+                    </div>
+                    <div class="project-content">
+                        <h3>SoundTown</h3>
+                        <p class="project-description">An app to try Spotify API and scroll snap types (currently unavailable)</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">APIs</span>
+                            <span class="tech-tag">Postman</span>
+                            <span class="tech-tag">Modern CSS</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/J0rgw/SoundTown" target="_blank" rel="noopener noreferrer" class="project-link">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 3: Portfolio V1 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="src/images/portfoliov1.png" alt="Portfolio V1">
+                    </div>
+                    <div class="project-content">
+                        <h3>Portfolio V1</h3>
+                        <p class="project-description">The first quick version of my portfolio using mobile first approach</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Tailwind</span>
+                            <span class="tech-tag">PostCSS</span>
+                            <span class="tech-tag">NPM</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/J0rgw/portfolio" target="_blank" rel="noopener noreferrer" class="project-link">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 4: TDD Cypress Login -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="src/images/TDD.png" alt="TDD Cypress Login">
+                    </div>
+                    <div class="project-content">
+                        <h3>TDD Cypress Login</h3>
+                        <p class="project-description">Test Driven Development with Cypress and Tailwind CSS</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Cypress</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Tailwind</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/J0rgw/CypressTestForms" target="_blank" rel="noopener noreferrer" class="project-link">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <span class="section-divider"></span>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience-section">
+        <div class="container">
+            <h2 class="section-title">Experience & Education</h2>
+            <div class="experience-education-wrapper">
+                <!-- Work Experience -->
+                <div class="experience-column">
+                    <h3 class="category-title">Work Experience</h3>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4 class="timeline-role">Fullstack Developer</h4>
+                                <span class="timeline-company">Grupo Fuertes</span>
+                                <span class="timeline-date">March 2025 – June 2025</span>
+                                <p>Developed and maintained web applications using modern technologies.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4 class="timeline-role">Google Developer Group Organizer</h4>
+                                <span class="timeline-company">Google Developer Group</span>
+                                <span class="timeline-date">Nov 2022 – Current</span>
+                                <p>Organizing tech events and workshops for the developer community.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4 class="timeline-role">Google Developer Student Club Lead</h4>
+                                <span class="timeline-company">Google Developer Student Clubs</span>
+                                <span class="timeline-date">Jun 2023 – June 2024</span>
+                                <p>Leading a team of students to learn and build solutions for local businesses.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Education -->
+                <div class="education-column">
+                    <h3 class="category-title">Education</h3>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4 class="timeline-role">Web Development</h4>
+                                <span class="timeline-company">UCAM</span>
+                                <span class="timeline-date">2023 – 2025</span>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4 class="timeline-role">Computer Engineering</h4>
+                                <span class="timeline-company">UCAM</span>
+                                <span class="timeline-date">2021 – 2023</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <span class="section-divider"></span>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+        <div class="container">
+            <h2 class="section-title">Skills & Expertise</h2>
+            
+            <!-- Frontend Skills -->
+            <div class="skills-category">
+                <h3 class="category-title">Frontend Development</h3>
+                <div class="skills-grid">
+                    <div class="skill-card" data-skill="typescript">
+                        <div class="skill-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <div class="skill-content">
+                            <h4>TypeScript</h4>
+                            <p>Strongly typed tsx for scalable applications with my own components</p>
+                            <div class="skill-level">
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-level="90"></div>
+                                </div>
+                                <span class="skill-percentage">90%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-card" data-skill="javascript">
+                        <div class="skill-icon">
+                            <i class="fab fa-js-square"></i>
+                        </div>
+                        <div class="skill-content">
+                            <h4>JavaScript</h4>
+                            <p>Modern ES6+ features and functional programming</p>
+                            <div class="skill-level">
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-level="95"></div>
+                                </div>
+                                <span class="skill-percentage">95%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-card" data-skill="react">
+                        <div class="skill-icon">
+                            <i class="fab fa-react"></i>
+                        </div>
+                        <div class="skill-content">
+                            <h4>React</h4>
+                            <p>Component-based architecture and hooks</p>
+                            <div class="skill-level">
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-level="88"></div>
+                                </div>
+                                <span class="skill-percentage">88%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-card" data-skill="angular">
+                        <div class="skill-icon">
+                            <i class="fab fa-angular"></i>
+                        </div>
+                        <div class="skill-content">
+                            <h4>Angular</h4>
+                            <p>Full-featured framework with TypeScript</p>
+                            <div class="skill-level">
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-level="85"></div>
+                                </div>
+                                <span class="skill-percentage">85%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-card" data-skill="gsap">
+                        <div class="skill-icon">
+                            <i class="fas fa-magic"></i>
+                        </div>
+                        <div class="skill-content">
+                            <h4>GSAP</h4>
+                            <p>Professional-grade animations and interactions</p>
+                            <div class="skill-level">
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-level="92"></div>
+                                </div>
+                                <span class="skill-percentage">92%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-card" data-skill="mobile-first">
+                        <div class="skill-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <div class="skill-content">
+                            <h4>Mobile First</h4>
+                            <p>Responsive design with mobile-first approach</p>
+                            <div class="skill-level">
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-level="96"></div>
+                                </div>
+                                <span class="skill-percentage">96%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-card" data-skill="ux">
+                        <div class="skill-icon">
+                            <i class="fas fa-user-check"></i>
+                        </div>
+                        <div class="skill-content">
+                            <h4>UX Design</h4>
+                            <p>User-centered design and usability principles</p>
+                            <div class="skill-level">
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-level="89"></div>
+                                </div>
+                                <span class="skill-percentage">89%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-card" data-skill="modern-css">
+                        <div class="skill-icon">
+                            <i class="fab fa-css3-alt"></i>
+                        </div>
+                        <div class="skill-content">
+                            <h4>Modern CSS</h4>
+                            <p>Grid, Flexbox, Custom Properties, and animations</p>
+                            <div class="skill-level">
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-level="94"></div>
+                                </div>
+                                <span class="skill-percentage">94%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-card" data-skill="tdd">
+                        <div class="skill-icon">
+                            <i class="fas fa-vial"></i>
+                        </div>
+                        <div class="skill-content">
+                            <h4>Test Driven Development</h4>
+                            <p>Writing tests first, ensuring code quality and reliability</p>
+                            <div class="skill-level">
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-level="85"></div>
+                                </div>
+                                <span class="skill-percentage">85%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <span class="section-divider"></span>
+    </section>
+
+    <!-- Backend Skills -->
+    <section class="skills-section">
+        <div class="container">
+            <div class="skills-category">
+                <h3 class="category-title">Backend Development</h3>
+                <div class="skills-grid">
+                    <div class="skill-card" data-skill="nodejs">
+                        <div class="skill-icon">
+                            <i class="fab fa-node-js"></i>
+                        </div>
+                        <div class="skill-content">
+                            <h4>Node.js</h4>
+                            <p>Server-side JavaScript runtime and API development</p>
+                            <div class="skill-level">
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-level="87"></div>
+                                </div>
+                                <span class="skill-percentage">87%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-card" data-skill="python">
+                        <div class="skill-icon">
+                            <i class="fab fa-python"></i>
+                        </div>
+                        <div class="skill-content">
+                            <h4>Python</h4>
+                            <p>Backend development and data processing</p>
+                            <div class="skill-level">
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-level="82"></div>
+                                </div>
+                                <span class="skill-percentage">82%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-card" data-skill="firebase">
+                        <div class="skill-icon">
+                            <i class="fas fa-fire"></i>
+                        </div>
+                        <div class="skill-content">
+                            <h4>Firebase</h4>
+                            <p>Cloud services, authentication, and real-time database</p>
+                            <div class="skill-level">
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-level="85"></div>
+                                </div>
+                                <span class="skill-percentage">85%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-card" data-skill="nosql">
+                        <div class="skill-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <div class="skill-content">
+                            <h4>NoSQL Database</h4>
+                            <p>MongoDB, document-based data modeling</p>
+                            <div class="skill-level">
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-level="80"></div>
+                                </div>
+                                <span class="skill-percentage">80%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-card" data-skill="apis">
+                        <div class="skill-icon">
+                            <i class="fas fa-plug"></i>
+                        </div>
+                        <div class="skill-content">
+                            <h4>APIs & CRUD</h4>
+                            <p>RESTful API design and database operations</p>
+                            <div class="skill-level">
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-level="90"></div>
+                                </div>
+                                <span class="skill-percentage">90%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-card" data-skill="mysql">
+                        <div class="skill-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <div class="skill-content">
+                            <h4>MySQL</h4>
+                            <p>Relational database design and SQL queries</p>
+                            <div class="skill-level">
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-level="78"></div>
+                                </div>
+                                <span class="skill-percentage">78%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <span class="section-divider"></span>
+    </section>
+
+    <!-- Other Skills -->
+    <section class="skills-section">
+        <div class="container">
+            <div class="skills-category">
+                <h3 class="category-title">Other Skills</h3>
+                <div class="skills-grid">
+                    <div class="skill-card" data-skill="git">
+                        <div class="skill-icon">
+                            <i class="fab fa-git-alt"></i>
+                        </div>
+                        <div class="skill-content">
+                            <h4>Git & GitHub</h4>
+                            <p>Version control, collaboration, and project management</p>
+                            <div class="skill-level">
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-level="92"></div>
+                                </div>
+                                <span class="skill-percentage">92%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+
+                    <div class="skill-card" data-skill="spanish">
+                        <div class="skill-icon">
+                            <i class="fas fa-language"></i>
+                        </div>
+                        <div class="skill-content">
+                            <h4>Spanish</h4>
+                            <p>Native language - Mother tongue proficiency</p>
+                            <div class="skill-level">
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-level="100"></div>
+                                </div>
+                                <span class="skill-percentage">100%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-card" data-skill="english">
+                        <div class="skill-icon">
+                            <i class="fas fa-language"></i>
+                        </div>
+                        <div class="skill-content">
+                            <h4>English</h4>
+                            <p>Bilingual level - Professional proficiency</p>
+                            <div class="skill-level">
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-level="95"></div>
+                                </div>
+                                <span class="skill-percentage">95%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <span class="section-divider"></span>
+    </section>
+
+    <!-- New Footer -->
+    <footer id="contact" class="site-footer">
+        <div class="footer-container">
+            <h2 class="footer-title">Let's Connect</h2>
+            <p class="footer-subtitle">I'm currently available for work and open to discussing new offers. Let's build something amazing together.</p>
+            <div class="footer-contact-grid">
+                <a href="https://github.com/J0rgw" target="_blank" rel="noopener noreferrer" class="contact-card">
+                    <div class="contact-card-icon"><i class="fab fa-github"></i></div>
+                    <div class="contact-card-info">
+                        <span class="contact-card-title">GitHub</span>
+                        <span class="contact-card-link">View Profile &rarr;</span>
+                    </div>
+                </a>
+                <a href="https://www.linkedin.com/in/jorge-arcas-verdejo-18ba29255/" target="_blank" rel="noopener noreferrer" class="contact-card">
+                    <div class="contact-card-icon"><i class="fab fa-linkedin"></i></div>
+                    <div class="contact-card-info">
+                        <span class="contact-card-title">LinkedIn</span>
+                        <span class="contact-card-link">Connect with Me &rarr;</span>
+                    </div>
+                </a>
+                <a href="mailto:jorgearcasverdejo@gmail.com" class="contact-card">
+                    <div class="contact-card-icon"><i class="fas fa-envelope"></i></div>
+                    <div class="contact-card-info">
+                        <span class="contact-card-title">Email</span>
+                        <span class="contact-card-link">jorgearcasverdejo@gmail.com</span>
+                    </div>
+                </a>
+            </div>
+            <div class="footer-bottom-bar">
+                <p>&copy; 2025 Jorge Arcas. with no framework because github pages.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Vendor Scripts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollSmoother.min.js"></script>
+    <script src="https://unpkg.com/gsap/dist/Observer.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/SplitText.min.js"></script>
+    <!-- Animation Modules -->
+    <script src="src/js/animations/common.js"></script>
+    <script src="src/js/animations/header.js"></script>
+    <script src="src/js/animations/about.js"></script>
+    <script src="src/js/animations/projects.js"></script>
+    <script src="src/js/animations/skills.js"></script>
+    <script src="src/js/animations/footer.js"></script>
+    
+    <!-- Main Initializer -->
+    <script src="src/js/main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,337 @@
+/* Header */
+header {
+    background-color: #141414;
+    color: #fff;
+    padding: 18px 24px;
+    border-radius: 100vmax;
+    width: 100px;
+    margin: 4rem auto;
+    position: relative;
+    align-content: center;
+    min-height: 102px;
+}
+
+header .logo,
+header nav ul,
+header .menu-toggle {
+    opacity: 0;
+    visibility: hidden;
+}
+
+header.is-ready .logo,
+header.is-ready nav ul,
+header.is-ready .menu-toggle {
+    visibility: visible;
+}
+
+.header-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    justify-items: stretch;
+    align-items: center;
+}
+
+.logo img {
+    max-width: 50px;
+    height: auto;
+    display: block;
+    margin-left: 5px;
+}
+
+/* Main Navigation */
+nav {
+    justify-self: center;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    position: relative;
+    z-index: 1;
+    background-color: #141414;
+    border-radius: 24px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 24px;
+    display: block;
+    position: relative;
+    z-index: 2;
+    transition: color 0.3s ease;
+    letter-spacing: -.5px;
+    font-weight: 300;
+}
+
+/* Desktop Nav Hover Effect */
+.nav-links-hover-block {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0;
+    height: 40px;
+    background-color: #ffffff0f;
+    border-radius: 24px;
+    transition: none;
+    will-change: transform, width, height, opacity;
+}
+
+/* Menu Toggle Button (Hamburger) */
+.menu-toggle {
+    cursor: pointer;
+    z-index: 1001;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    margin-left: auto;
+    border-radius: 100vmax;
+    border: 0;
+}
+
+/* Full-Width Overlay Menu */
+.full-width-overlay-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 0;
+    background-color: rgba(0, 0, 0, 1);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    visibility: hidden;
+    opacity: 0;
+    overflow: hidden;
+}
+
+.overlay-menu-content {
+    text-align: left;
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    box-sizing: border-box;
+    opacity: 0;
+    transform: translateY(20px);
+    z-index: 10;
+    color: #141414;
+}
+
+.overlay-nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.overlay-nav-list li {
+    margin-bottom: 20px;
+}
+
+.overlay-nav-list li:last-child {
+    margin-bottom: 0;
+}
+
+.overlay-nav-list li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 4.5em;
+    font-size: clamp(2.5rem, 4.5vw, 4.5rem);
+    font-weight: bold;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 10px 15px;
+    position: relative;
+    overflow: hidden;
+}
+
+.overlay-nav-list li a .mask {
+    overflow: hidden;
+    display: block;
+}
+
+.overlay-nav-list li a .line-inner {
+    display: inline-block;
+}
+
+.full-width-menu.is-active .overlay-menu-images {
+    display: block;
+}
+
+.overlay-menu-image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    max-width: 50vw;
+}
+
+.overlay-menu-image img {
+    width: 100%;
+    height: 100%;
+    min-height: 100dvh;
+    object-fit: cover;
+    border-radius: 0;
+}
+
+.overlay-menu-image:first-child {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Responsive Header Styles */
+@media only screen and (max-width: 1100px) {
+    nav.main-nav {
+        display: none;
+    }
+
+    .header-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 769px) {
+    .logo {
+        grid-column: 1 / 2;
+    }
+
+    nav {
+        grid-column: 2 / 3;
+    }
+
+    .menu-toggle {
+        grid-column: 3 / 4;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    header {
+        min-height: 82px;
+    }
+
+    header .logo svg {
+        max-width: 100px;
+    }
+
+    .overlay-menu-content {
+        min-height: 100%;
+        place-content: center;
+    }
+
+    .overlay-menu-image {
+        max-width: 100%;
+    }
+
+    .overlay-menu-image:after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+        pointer-events: none;
+        z-index: 1;
+    }
+}
+
+/* Floating Menu Button */
+.floating-menu-btn {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 60px;
+    height: 60px;
+    background-color: #141414;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1000;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0.8);
+}
+
+.floating-menu-btn.is-visible {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+}
+
+.floating-menu-btn:hover {
+    background-color: #000;
+    transform: scale(1.1);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
+}
+
+.floating-menu-btn svg {
+    width: 24px;
+    height: 24px;
+    color: #fff;
+    transition: transform 0.3s ease;
+}
+
+.floating-menu-btn:hover svg {
+    transform: rotate(90deg);
+}
+
+/* Floating menu hamburger animation */
+.floating-menu-btn .line {
+    transition: all 0.3s ease;
+}
+
+.floating-menu-btn.is-active .line:nth-child(1) {
+    opacity: 0;
+}
+
+.floating-menu-btn.is-active .line:nth-child(2) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.floating-menu-btn.is-active .line:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .floating-menu-btn {
+        bottom: 1.5rem;
+        right: 1.5rem;
+        width: 56px;
+        height: 56px;
+        /* Ensure touch-friendly size */
+        min-width: 44px;
+        min-height: 44px;
+    }
+    
+    .floating-menu-btn svg {
+        width: 22px;
+        height: 22px;
+    }
+    
+    /* Improve touch interaction */
+    .floating-menu-btn:active {
+        transform: scale(0.95);
+    }
+    
+    /* Ensure overlay menu is touch-friendly */
+    .overlay-nav-list li a {
+        padding: 15px 20px; /* Larger touch targets */
+        min-height: 44px; /* Minimum touch target size */
+        display: flex;
+        align-items: center;
+    }
+} 

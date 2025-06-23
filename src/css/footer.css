@@ -1,0 +1,277 @@
+/* Modern Footer Styling */
+footer, .site-footer {
+    background-color: var(--color-footer-bg);
+    color: #e0e0e0;
+}
+
+.site-footer {
+    padding: 8rem 2rem 3rem;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative; /* To be above the ::before pseudo-element */
+    z-index: 1;
+}
+
+.footer-title {
+    font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-weight: 700;
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.02em;
+}
+
+.footer-subtitle {
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(1rem, 3vw, 1.2rem);
+    max-width: 650px;
+    margin: 0 auto 4rem;
+    line-height: 1.8;
+    color: #a0a0a0;
+    font-weight: 400;
+}
+
+.footer-contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem; /* Increased gap */
+    margin-bottom: 6rem;
+}
+
+.contact-card {
+    background-color: #181818;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 2.5rem;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    text-decoration: none;
+    color: #e0e0e0;
+    position: relative;
+    overflow: hidden; /* Important for the spotlight effect */
+    transition: all 0.4s ease;
+}
+
+/* Spotlight Effect */
+.contact-card::before {
+    content: '';
+    position: absolute;
+    top: var(--y);
+    left: var(--x);
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 0;
+    background: radial-gradient(circle, rgba(97, 218, 251, 0.15) 0%, rgba(97, 218, 251, 0) 70%);
+    border-radius: 50%;
+    opacity: 0;
+    transition: width 0.4s ease-out, height 0.4s ease-out, opacity 0.4s ease-out;
+}
+
+.contact-card:hover {
+    border-color: rgba(97, 218, 251, 0.4);
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.contact-card:hover::before {
+    width: 400px;
+    height: 400px;
+    opacity: 1;
+}
+
+.contact-card-icon {
+    font-size: clamp(2.2rem, 5vw, 2.8rem); /* Slightly larger icon */
+    color: #1977bf;
+    flex-shrink: 0;
+    transition: transform 0.4s ease;
+}
+
+.contact-card:hover .contact-card-icon {
+    transform: scale(1.1);
+}
+
+.contact-card-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-card-title {
+    font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-weight: 700;
+    font-size: clamp(1.1rem, 3vw, 1.3rem);
+    color: #ffffff;
+    margin-bottom: 0.4rem;
+    letter-spacing: -0.01em;
+}
+
+.contact-card-link {
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(0.9rem, 2.5vw, 1rem);
+    color: #a0a0a0;
+    transition: color 0.3s ease;
+    font-weight: 400;
+}
+
+.contact-card:hover .contact-card-link {
+    color: #1977bf;
+}
+
+.footer-bottom-bar {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 2.5rem;
+    margin-top: 2rem;
+}
+
+.footer-bottom-bar p {
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(0.85rem, 2.5vw, 0.95rem);
+    color: #888;
+    letter-spacing: 0.01em;
+    font-weight: 400;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .site-footer {
+        padding: 6rem 1.5rem 2rem;
+    }
+    
+    .footer-title {
+        font-size: clamp(2rem, 7vw, 3rem);
+        margin-bottom: 1.2rem;
+    }
+    
+    .footer-subtitle {
+        font-size: clamp(0.95rem, 3.5vw, 1.1rem);
+        margin-bottom: 3rem;
+        line-height: 1.6;
+    }
+    
+    .footer-contact-grid {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+        margin: 0 auto 4rem;
+        gap: 2rem;
+    }
+    
+    .contact-card {
+        padding: 2rem 1.5rem;
+        gap: 1.2rem;
+    }
+    
+    .contact-card-icon {
+        font-size: clamp(2rem, 6vw, 2.5rem);
+    }
+    
+    .contact-card-title {
+        font-size: clamp(1rem, 3.5vw, 1.2rem);
+    }
+    
+    .contact-card-link {
+        font-size: clamp(0.85rem, 3vw, 0.95rem);
+    }
+    
+    .footer-bottom-bar {
+        padding-top: 2rem;
+        margin-top: 1.5rem;
+    }
+    
+    .footer-bottom-bar p {
+        font-size: clamp(0.8rem, 3vw, 0.9rem);
+    }
+}
+
+@media (max-width: 480px) {
+    .site-footer {
+        padding: 4rem 1rem 1.5rem;
+    }
+    
+    .footer-title {
+        font-size: clamp(1.8rem, 8vw, 2.5rem);
+        margin-bottom: 1rem;
+    }
+    
+    .footer-subtitle {
+        font-size: clamp(0.9rem, 4vw, 1rem);
+        margin-bottom: 2.5rem;
+        line-height: 1.5;
+    }
+    
+    .footer-contact-grid {
+        gap: 1.5rem;
+        margin-bottom: 3rem;
+    }
+    
+    .contact-card {
+        padding: 1.5rem 1.2rem;
+        gap: 1rem;
+    }
+    
+    .contact-card-icon {
+        font-size: clamp(1.8rem, 7vw, 2.2rem);
+    }
+    
+    .contact-card-title {
+        font-size: clamp(0.95rem, 4vw, 1.1rem);
+    }
+    
+    .contact-card-link {
+        font-size: clamp(0.8rem, 3.5vw, 0.9rem);
+    }
+    
+    .footer-bottom-bar {
+        padding-top: 1.5rem;
+        margin-top: 1rem;
+    }
+    
+    .footer-bottom-bar p {
+        font-size: clamp(0.75rem, 3.5vw, 0.85rem);
+    }
+}
+
+.open-for-work {
+    display: inline-flex;
+    align-items: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #fff;
+    background: var(--color-card-bg);
+    border: 1.5px solid var(--color-card-border);
+    border-radius: 16px;
+    box-shadow: 0 2px 16px 0 rgba(25,119,191,0.10), 0 1.5px 6px 0 rgba(25,119,191,0.08);
+    padding: 0.35em 1.3em;
+    margin-top: 1.1em;
+    margin-bottom: 0.2em;
+    position: relative;
+    transition: background 0.2s, color 0.2s;
+    overflow: hidden;
+}
+.open-for-work::before {
+    content: '';
+    position: absolute;
+    top: var(--y, 50%);
+    left: var(--x, 50%);
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 0;
+    background: radial-gradient(circle, rgba(25,119,191,0.15) 0%, rgba(25,119,191,0) 70%);
+    border-radius: 50%;
+    opacity: 0;
+    transition: width 0.4s, height 0.4s, opacity 0.4s;
+    pointer-events: none;
+}
+.open-for-work:hover::before, .open-for-work:focus::before {
+    width: 400px;
+    height: 400px;
+    opacity: 1;
+}

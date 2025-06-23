@@ -1,0 +1,134 @@
+/* About Section */
+.about-section {
+    width: 100%;
+    padding: 6rem 0;
+    background-color: var(--color-bg);
+    overflow: hidden;
+    position: relative;
+}
+
+.about-container {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    text-align: center;
+}
+
+.about-content {
+    padding: 2.5rem;
+    background-color: #141414;
+    color: white;
+    transform: rotate(2deg);
+    opacity: 0;
+    margin: 0 auto;
+    max-width: 900px;
+    box-sizing: border-box;
+}
+
+.about-content h2 {
+    font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-weight: 700;
+    font-size: clamp(2.2rem, 6vw, 6rem);
+    margin-bottom: 1.5rem;
+    color: white;
+    text-align: center;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+}
+
+.about-text {
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+.about-text p {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.3rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    color: #ffffff;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about-text p.lead {
+    font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-weight: 700;
+    font-size: 2.2rem;
+    color: #fff;
+    margin-bottom: 1.2rem;
+    line-height: 1.3;
+    text-transform: uppercase;
+    letter-spacing: -0.01em;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .about-section {
+        padding: 4rem 0;
+    }
+    
+    .about-container {
+        padding: 0 1.5rem;
+    }
+    
+    .about-content {
+        padding: 2rem 1.5rem;
+        transform: rotate(1deg);
+    }
+    
+    .about-content h2 {
+        font-size: clamp(1.8rem, 7vw, 2.5rem);
+        margin-bottom: 1.2rem;
+        line-height: 1.2;
+    }
+    
+    .about-text p.lead {
+        font-size: clamp(1.5rem, 5vw, 2rem);
+        margin-bottom: 1rem;
+        line-height: 1.3;
+    }
+    
+    .about-text p:not(.lead) {
+        font-size: clamp(1rem, 3.5vw, 1.2rem);
+        line-height: 1.6;
+        margin-bottom: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-section {
+        padding: 3rem 0;
+    }
+    
+    .about-container {
+        padding: 0 1rem;
+    }
+    
+    .about-content {
+        padding: 1.5rem 1.2rem;
+        transform: rotate(0.5deg);
+    }
+    
+    .about-content h2 {
+        font-size: clamp(1.6rem, 8vw, 2rem);
+        margin-bottom: 1rem;
+        line-height: 1.15;
+    }
+    
+    .about-text p.lead {
+        font-size: clamp(1.3rem, 6vw, 1.8rem);
+        margin-bottom: 0.8rem;
+        line-height: 1.25;
+    }
+    
+    .about-text p:not(.lead) {
+        font-size: clamp(0.95rem, 4vw, 1.1rem);
+        line-height: 1.5;
+        margin-bottom: 1rem;
+    }
+} 
